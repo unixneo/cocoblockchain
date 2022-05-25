@@ -79,6 +79,9 @@ private
   end
 
   def compute_hash_with_proof_of_work( difficulty='00' )
+    if !ENV['BITCOIN_LITE_DIFFICULTY'].nil? && ENV['BITCOIN_LITE_DIFFICULTY'].length > 1
+       difficulty = ENV['BITCOIN_LITE_DIFFICULTY']
+    end
     nonce = 0
     loop do
       hash = calc_hash_with_nonce( nonce )
