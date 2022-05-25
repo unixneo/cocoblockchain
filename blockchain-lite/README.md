@@ -5,7 +5,7 @@ blockchain-lite library / gem - build your own blockchain with crypto hashes - r
 
 Env Vars:
 
-```commmand
+```command
     export BITCOIN_LITE_DIFFICULTY='0000'
 ```
 
