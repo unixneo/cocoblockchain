@@ -2,6 +2,13 @@
 
 blockchain-lite library / gem - build your own blockchain with crypto hashes - revolutionize the world with blockchains, blockchains, blockchains one block at a time
 
+
+Env Vars:
+
+```commmand
+    export BITCOIN_LITE_DIFFICULTY='0000'
+```
+
 * home  :: [github.com/rubycoco/blockchain](https://github.com/rubycoco/blockchain)
 * bugs  :: [github.com/rubycoco/blockchain/issues](https://github.com/rubycoco/blockchain/issues)
 * gem   :: [rubygems.org/gems/blockchain-lite](https://rubygems.org/gems/blockchain-lite)
