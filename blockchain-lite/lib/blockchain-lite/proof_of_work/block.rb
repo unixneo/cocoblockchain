@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'colorize'
 
 module BlockchainLite
   module ProofOfWork
@@ -82,6 +83,7 @@ private
     if !ENV['BITCOIN_LITE_DIFFICULTY'].nil? && ENV['BITCOIN_LITE_DIFFICULTY'].length > 1
        difficulty = ENV['BITCOIN_LITE_DIFFICULTY']
     end
+    print_difficult_with_colors(difficulty)
     nonce = 0
     loop do
       hash = calc_hash_with_nonce( nonce )
@@ -90,6 +92,16 @@ private
       else
         nonce += 1             ## keep trying (and trying and trying)
       end
+    end
+  end
+
+  def print_difficult_with_colors(difficulty)
+    if difficulty.length > 6
+      puts "BITCOIN_LITE_DIFFICULTY: #{difficulty}".red
+    elsif difficulty.length > 5
+      puts "BITCOIN_LITE_DIFFICULTY: #{difficulty}".yellow
+    else
+      puts "BITCOIN_LITE_DIFFICULTY: #{difficulty}".green
     end
   end
 
