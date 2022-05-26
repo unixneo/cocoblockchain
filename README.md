@@ -1,5 +1,11 @@
 # blockchain tools, libraries & scripts
 
+ENV Vars:
+
+```command
+   export BITCOIN_LITE_DIFFICULTY='0000'
+```
+
 Gems:
 
 - [elliptic-lite](elliptic-lite) - elliptic curve cryptography from scratch / zero - start with finite fields, add elliptic curve points and point addition and scalar multiplications, add the elliptic curve digital signature algorithm (ECDSA) using the secp256k1 curve / group to sign and verify messages and more

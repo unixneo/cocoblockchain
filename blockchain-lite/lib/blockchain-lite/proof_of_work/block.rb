@@ -78,8 +78,15 @@ private
     sha.hexdigest
   end
 
+<<<<<<< HEAD
   def compute_hash_with_proof_of_work( difficulty=ENV['BITCOIN_LITE_DIFFICULTY'])
    puts "BITCOIN_LITE_DIFFICULTY = #{difficulty}"
+=======
+  def compute_hash_with_proof_of_work( difficulty='00' )
+    if !ENV['BITCOIN_LITE_DIFFICULTY'].nil? && ENV['BITCOIN_LITE_DIFFICULTY'].length > 1
+       difficulty = ENV['BITCOIN_LITE_DIFFICULTY']
+    end
+>>>>>>> a09443c40be0d6140a907afaa6b1cc2d1c4cebb8
     nonce = 0
     loop do
       hash = calc_hash_with_nonce( nonce )
